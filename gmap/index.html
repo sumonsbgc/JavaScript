@@ -15,17 +15,38 @@
       
     <script>
             function myMap() {
+                var locationElement = document.getElementById("googleMap")
+
                 var options = {
                     center: new google.maps.LatLng(22.3261918, 91.6797793),
                     zoom: 12,
                 };
-                var locationElement = document.getElementById("googleMap")
-                var map = new google.maps.Map(locationElement, options);
                 
-                var marker = new google.maps.Marker({
-                    position: {lat: 22.335533, lng: 91.8306371 },
-                    map: map,
-                    icon: "http://www.daytonabeachresort.com/flashcab/directory/social-icons/Map_marker.png"
+                var map = new google.maps.Map(locationElement, options);
+
+                function addMarker(props){
+                    var marker = new google.maps.Marker({
+                        position: props.choords,
+                        map: map,
+                    });
+                    if(props.icon){
+                        marker.setIcon(props.icon);
+                    }
+                    if(props.content){
+                        var info = new google.maps.InfoWindow({
+                            content: props.content,
+                        })
+                        
+                        marker.addListener('click', function () {
+                            info.open(map, marker)
+                        });
+                    }
+                }
+                
+                addMarker({
+                    choords: {lat: 22.335533, lng: 91.8306371},
+                    icon: "http://www.daytonabeachresort.com/flashcab/directory/social-icons/Map_marker.png",
+                    content: '<div> <img src="https://lh5.googleusercontent.com/proxy/Q39ThZJyRCXy366_vG3xeYHL4YrDDpcLJ8mXtscljZ9HCAPZRe2bf54USQrWEz5Oiu1j0EX82S3GPUXXMW664YbMVHeqGdfLIRr24ymH1P_yLQtymV2hk6_Bjc19Tvs887J-Fo-sKmjNrglIzqTH4KkGFwz4Y5Q=w408-h273-k-no"> </div>',
                 })
 
             }
