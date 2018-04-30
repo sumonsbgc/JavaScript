@@ -41,13 +41,35 @@
                             info.open(map, marker)
                         });
                     }
+                } 
+
+                var markers = [
+                    {
+                        choords: { lat: 22.335533, lng: 91.8306371 },
+                        icon: "http://www.daytonabeachresort.com/flashcab/directory/social-icons/Map_marker.png",
+                        content: '<div> <img src="https://lh5.googleusercontent.com/proxy/Q39ThZJyRCXy366_vG3xeYHL4YrDDpcLJ8mXtscljZ9HCAPZRe2bf54USQrWEz5Oiu1j0EX82S3GPUXXMW664YbMVHeqGdfLIRr24ymH1P_yLQtymV2hk6_Bjc19Tvs887J-Fo-sKmjNrglIzqTH4KkGFwz4Y5Q=w408-h273-k-no"> </div>',
+                    },
+                    {
+                        choords: { lat: 22.3286624, lng: 91.8280816 },
+                        icon: "http://www.daytonabeachresort.com/flashcab/directory/social-icons/Map_marker.png",
+                        content: '<div> <img src="http://3.bp.blogspot.com/-5asg-_63dos/UjceIbM0OXI/AAAAAAAAACc/u-j9U0eJpeo/s1600/slide.jpg"> </div>',
+                    },
+                    {
+                        choords: { lat: 22.2477735, lng: 92.0155296 },
+                        icon: "http://www.daytonabeachresort.com/flashcab/directory/social-icons/Map_marker.png",
+                        content: '<div> <img src="https://1.bp.blogspot.com/-WOcjtUQO6S8/WMQgE7G2URI/AAAAAAAAK8Y/uZec8AgT0aYBeqe8F2bd1_WN1qxA3j_RQCLcB/s1600/BGC%2BTrust%2BMedical%2BCollege.jpg"> </div>',
+                    },
+                    {
+                        choords: { lat: 22.32597, lng: 91.8151034 },
+                        icon: "http://www.daytonabeachresort.com/flashcab/directory/social-icons/Map_marker.png",
+                        content: '<div> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Portal_of_Government_College_of_Commerce_%2802%29.jpg/1200px-Portal_of_Government_College_of_Commerce_%2802%29.jpg"> </div>',
+                    },
+                ]
+
+                var markersLength = markers.length;
+                for(var i=0; i<markersLength; i++){
+                    addMarker(markers[i]);
                 }
-                
-                addMarker({
-                    choords: {lat: 22.335533, lng: 91.8306371},
-                    icon: "http://www.daytonabeachresort.com/flashcab/directory/social-icons/Map_marker.png",
-                    content: '<div> <img src="https://lh5.googleusercontent.com/proxy/Q39ThZJyRCXy366_vG3xeYHL4YrDDpcLJ8mXtscljZ9HCAPZRe2bf54USQrWEz5Oiu1j0EX82S3GPUXXMW664YbMVHeqGdfLIRr24ymH1P_yLQtymV2hk6_Bjc19Tvs887J-Fo-sKmjNrglIzqTH4KkGFwz4Y5Q=w408-h273-k-no"> </div>',
-                })
 
             }
         </script>
