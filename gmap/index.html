@@ -14,7 +14,7 @@
     <div id="googleMap" style="width: 100%; height: 500px;"></div>
       
     <script>
-            function myMap() {
+            function myMap() {                
                 var locationElement = document.getElementById("googleMap")
 
                 var options = {
@@ -22,7 +22,7 @@
                     zoom: 12,
                     mapTypeId: 'terrain',
                     heading: 90,
-                    zoomControlOptions:{
+                    ZoomControlOptions:{
                         position: google.maps.ControlPosition.LEFT_BOTTOM,
                         stye: google.maps.ZoomControlOptions.DEFAULT
                     },
@@ -31,9 +31,9 @@
                     },
                     cluster: false,
                     geocoder: true,
-                    disableDefaultUI: false,
-                    scrollwheel: true,
-                    draggable: true,
+                    disableDefaultUI: true,
+                    scrollwheel: false,
+                    draggable: false,
                     tilt: 45,
                     styles:[
                         {
@@ -339,7 +339,6 @@
                         content: '<div> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Portal_of_Government_College_of_Commerce_%2802%29.jpg/1200px-Portal_of_Government_College_of_Commerce_%2802%29.jpg"> </div>',
                     },
                 ]
-
                 var markersLength = markers.length;
                 for(var i=0; i<markersLength; i++){
                     addMarker(markers[i]);
