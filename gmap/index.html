@@ -22,6 +22,18 @@
                     zoom: 12,
                     mapTypeId: 'terrain',
                     heading: 90,
+                    zoomControlOptions:{
+                        position: google.maps.ControlPosition.LEFT_BOTTOM,
+                        stye: google.maps.ZoomControlOptions.DEFAULT
+                    },
+                    panControlOptions: {
+                        position: google.maps.ControlPosition.LEFT_BOTTOM
+                    },
+                    cluster: false,
+                    geocoder: true,
+                    disableDefaultUI: false,
+                    scrollwheel: true,
+                    draggable: true,
                     tilt: 45,
                     styles:[
                         {
