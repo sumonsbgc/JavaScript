@@ -19,7 +19,6 @@ function checkingInputValue(){
 }
 
 
-form.signup_submit.addEventListener('click', function(e){
-    e.preventDefault();
-    checkingInputValue();
+form.signup_submit.addEventListener('keypress', function (e) {
+    console.log(e);
 });

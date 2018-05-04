@@ -20,19 +20,26 @@
                 var options = {
                     center: new google.maps.LatLng(22.3261918, 91.6797793),
                     zoom: 12,
-                    mapTypeId: 'terrain',
+                    // mapTypeId: 'terrain',
+                    mapTypeIds: ['roadmap', 'terrain', 'satellite', 'hybrid'],
                     heading: 90,
-                    ZoomControlOptions:{
-                        position: google.maps.ControlPosition.LEFT_BOTTOM,
-                        stye: google.maps.ZoomControlOptions.DEFAULT
+                    zoomControl: true,
+                    zoomControlOptions:{
+                        position: google.maps.ControlPosition.TOP_RIGHT,
+                        // stye: google.maps.ZoomControlOptions.DEFAULT
                     },
-                    panControlOptions: {
-                        position: google.maps.ControlPosition.LEFT_BOTTOM
+                    mapTypeControl: true,
+                    mapTypeControlOptions:{
+                        style: google.maps.MapTypeControlStyle.DROPDOWN_MENU,
+                        position: google.maps.ControlPosition.RIGHT_TOP
                     },
+                    // panControlOptions: {
+                    //     position: google.maps.ControlPosition.LEFT_BOTTOM
+                    // },
                     cluster: false,
                     geocoder: true,
-                    disableDefaultUI: true,
-                    scrollwheel: false,
+                    disableDefaultUI: false,
+                    scrollwheel: true,
                     draggable: false,
                     tilt: 45,
                     styles:[
