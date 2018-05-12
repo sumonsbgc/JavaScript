@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1 align="center">Form Validation and Manipulating</h1>
-    <form action="output.html" method="post" name="signup_form" id="signup_form" class="classOne">
+    <form action="output.php" method="post" name="signup_form" id="signup_form" class="classOne">
         <table class="tbl-form">
             <tr>
                 <td><input type="file" name="user_profile" id="user_profile"></td>
@@ -28,9 +28,22 @@
                 <td class="error"> </td>
             </tr>
             <tr>
+                <td>
+                    Slect Your Favourite Game: 
+                    <select class="favgame">
+                        <option value="Cricket">Cricket</option>
+                        <option value="FootBall">FootBall</option>
+                        <option value="Rugby">Rugby</option>
+                        <option value="Hocky">Hocky</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
                 <td><input type="password" name="signup_pass" id="signup_pass" placeholder="Password"></td>
                 <td class="error"> </td>
             </tr>
+
             <tr>
                 <td><input type="password" name="signup_pass_again" id="signup_pass_again" placeholder="Password Repeat"></td>
                 <td class="error"> </td>
@@ -41,6 +54,41 @@
         </table>
     </form>
 
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="js/form.js"></script>
+    <script type="text/Javascript">
+        (function($){
+            $(document).ready(function(){
+                console.log($(".favgame"));
+
+                $("#signup_form").submit(function(){ 
+
+                    var that = $(this),
+                        url = that.attr("action"),
+                        method = that.attr("method"),
+                        data = {};
+
+                    that.find('[name]').each(function(index, value){
+                        var that = $(this),
+                            name = that.attr("name"),
+                            value = that.val();
+                            data[name] = value;
+                    });
+                    
+                     $.ajax({
+                        url: url,
+                        meta: method,
+                        data: JSON.stringify(data),
+                        success: function(xhr,response, stat){
+                            console.log(xhr);
+                            console.log(response);
+                            console.log(stat);
+                        }
+                    });
+                    return false;
+                })
+            });
+        }(jQuery))
+    </script>
 </body>
 </html>

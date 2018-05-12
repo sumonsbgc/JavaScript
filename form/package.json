@@ -1,0 +1,11 @@
+{
+  "name": "FormValidation",
+  "version": "1.0.0",
+  "description": "Form Validation Using Ajax",
+  "main": "index.html",
+  "author": "Sumon",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}
