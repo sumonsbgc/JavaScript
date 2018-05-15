@@ -3,23 +3,14 @@
     padding: 0;
 }
 
-.play{
+.play_pause{
     width: 30px;
     height: 30px;
     border-radius: 50%;
     border: 1px solid limegreen;
     line-height: 30px;
-    display: inline-block;
+    display: block;
     cursor: pointer;
-}
-
-.pause{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid royalblue;
-    line-height: 30px;
-    color: #000;
-    display: inline-block;
-    cursor: pointer;
+    padding: 10px;
+    margin: auto;
 }
