@@ -1,24 +1,25 @@
 var video = document.getElementById("vid_player"),
-    play  = document.querySelector(".play"),
-    pause = document.querySelector(".pause");
+    playPauseButton = document.querySelector(".play_pause");
 
-play.addEventListener("click", function(){
-    video.play();
+playPauseButton.addEventListener("click", function () {
+    if (video.paused) {
+        video.play();
+        playPauseButton.innerText = "Pause";
+    }else{
+        video.pause();
+        playPauseButton.innerText = "Play";
+    }
 });
 
-pause.addEventListener("click", function(){
-    video.pause();
-});
 
+// var video = $("#vid_player"),
+//     play  = $(".play"),
+//     pause = $(".pause");
 
-var video = $("#vid_player"),
-    play  = $(".play"),
-    pause = $(".pause");
+// play.on("click", function(){
+//     video.play();
+// });
 
-play.on("click", function(){
-    video.play();
-});
-
-pause.on("click", function(){
-    video.pause();
-});
+// pause.on("click", function(){
+//     video.pause();
+// });
