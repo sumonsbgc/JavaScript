@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 var video = document.querySelector("video"),
     play  = document.querySelector(".play"),
     pause = document.querySelector(".pause");
@@ -15,7 +14,6 @@ if (video.paused) {
         video.pause();
     });    
 }
-=======
 var video = document.getElementById("vid_player"),
     playPauseButton = document.querySelector(".play_pause");
 
@@ -28,7 +26,6 @@ playPauseButton.addEventListener("click", function () {
         playPauseButton.innerText = "Play";
     }
 });
->>>>>>> 68e9e1eb3e1c0a8d4114708e6cb601aaab44d7c6
 
 
 // var video = $("#vid_player"),
