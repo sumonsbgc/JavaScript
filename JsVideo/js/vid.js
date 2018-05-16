@@ -16,7 +16,7 @@ if (video.paused) {
 }
 var video = document.getElementById("vid_player"),
     playPauseButton = document.querySelector(".play_pause");
-
+    
 playPauseButton.addEventListener("click", function () {
     if (video.paused) {
         video.play();
@@ -26,6 +26,9 @@ playPauseButton.addEventListener("click", function () {
         playPauseButton.innerText = "Play";
     }
 });
+
+
+
 
 
 // var video = $("#vid_player"),
