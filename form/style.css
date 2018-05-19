@@ -2,6 +2,19 @@
     margin: 0;
     padding: 0;
 }
+.validate_error{
+    border: 2px solid yellow;
+    padding: 5px;
+    display: none;
+}
+
+.error,
+.validate_error {
+    color: red;
+    font-weight: 700;
+    font-size: 18px;
+}
+
 
 .tbl-form{
     width: 70%;
@@ -15,6 +28,8 @@
 .tbl-form tr td{
     padding-top: 15px;
 }
+
+
 
 input[type="text"], input[type="email"], input[type="password"]{
     width: 100%;
