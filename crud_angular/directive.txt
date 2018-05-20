@@ -1,0 +1,4 @@
+1. ng-app (initilize an application module)
+2. ng-model (for two way data binding)
+3. ng-init ()
+4. ng-repeat
