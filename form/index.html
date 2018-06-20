@@ -15,11 +15,11 @@
 
     <h1 align="center">Form Validation and Manipulating</h1>
     <form action="output.php" method="post" name="signup_form" id="signup_form" class="classOne" enctype="multipart/form-data">
-        <table class="tbl-form" m>
-            <!-- <tr>
-                <td><input type="file" name="user_profile" id="user_profile"></td>
+        <table class="tbl-form">
+            <tr>
+                <td><input type="file" name="user_profile" id="user_profile" accept=".csv"></td>
                 <td class="error"></td>
-            </tr> -->
+            </tr>
             <tr>
                 <td>
                     <input type="text" name="signup_fname" id="signup_fname" placeholder="First Name">
@@ -76,13 +76,16 @@
             </tr>            
         </table>
     </form>
+<div id="csv_container">
 
+</div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="js/form.js"></script>
-    <!-- <script type="text/Javascript">`
-        (function($){
+    <script type="text/Javascript">
+        ;(function($){
             $(document).ready(function(){
                 console.log($(".favgame"));
-
                 $("#signup_form").submit(function(){ 
 
                     var that = $(this),
@@ -99,19 +102,20 @@
                     
                      $.ajax({
                         url: url,
-                        meta: method,
-                        data: JSON.stringify(data),
-                        success: function(xhr,response, stat){
-                            console.log(xhr);
-                            console.log(response);
-                            console.log(stat);
+                        type: method,                        
+                        data: new FormData(this),
+                        contentType: false,
+                        cache: false,
+                        processData: false,
+                        success: function(data){
+                            console.log(data);
                         }
                     });
                     return false;
                 })
             });
         }(jQuery))
-    </script> -->
+    </script>
 </body>
 
 </html>
