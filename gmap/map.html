@@ -17,26 +17,29 @@
         function myMap() {
             var locationElement = document.getElementById("googleMap")
             var options = {
-                center: new google.maps.LatLng(51.625625, -0.1538717),
+                center: new google.maps.LatLng(51.6256283, -0.1538717),
                 zoom: 17,
-                zoomControl: true,
-                mapTypeControl: false,
+                dragable: false,
+                disableDefaultUI: true,
             };
+            
             var map = new google.maps.Map(locationElement, options);
+            
             function addMarker(props) {
                 var marker = new google.maps.Marker({
                     position: props.choords,
                     map: map,
                 });
-            }
+            };
             
             var markers = [{
-                    choords: {
-                        lat: 51.625625,
+                    choords: {                    
+                        lat: 51.625625,                        
                         lng: -0.151683
                     },
                 },
-            ]
+            ];
+
             var markersLength = markers.length;
             for (var i = 0; i < markersLength; i++) {
                 addMarker(markers[i]);
