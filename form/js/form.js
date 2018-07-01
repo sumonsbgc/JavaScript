@@ -1,20 +1,20 @@
-// var form        =   document.querySelector("#signup_form");
-// var fname       =   "",
-//     lname       =   "",
-//     email       =   "",
-//     pass        =   "",
-//     pass_again  =   "";
+var form        =   document.querySelector("#signup_form");
+var fname       =   "",
+    lname       =   "",
+    email       =   "",
+    pass        =   "",
+    pass_again  =   "";
 
 
-// form.signup_fname.addEventListener("blur", function(e){
-//     if(this.value){
-//         this.nextElementSibling.innerText = "";
-//         this.nextElementSibling.style.display = "none";
-//     }else{
-//         this.nextElementSibling.style.display = "block";
-//         this.nextElementSibling.innerText = "You can't leave this field in empty!";
-//     }
-// });
+form.signup_fname.addEventListener("blur", function(e){
+    if(this.value){
+        this.nextElementSibling.innerText = "";
+        this.nextElementSibling.style.display = "none";
+    }else{
+        this.nextElementSibling.style.display = "block";
+        this.nextElementSibling.innerText = "You can't leave this field in empty!";
+    }
+});
 
 // form.signup_fname.addEventListener("keyup", function(){
 //     if(this.value){

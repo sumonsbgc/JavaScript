@@ -66,10 +66,10 @@
             </tr>
 
             <tr>
-                <td>
+                <!-- <td>
                     <input type="submit" name="signup_submit" id="signup_submit" value="Submit">
                     <span class="error"></span>
-                </td>
+                </td> -->
             </tr>
             <tr>
                 <td class="validate_error"></td>
@@ -85,9 +85,15 @@
     <script type="text/Javascript">
         ;(function($){
             $(document).ready(function(){
-                console.log($(".favgame"));
-                $("#signup_form").submit(function(){ 
+                
+                if(event.keyCode == 13){
+                    console.log("Hello");
+                    alert("Hello");
+                    alert(document.getElementById("signup_fname").value);
+                }
 
+                $("#signup_form").submit(function(e){
+                    console.log(e);
                     var that = $(this),
                         url = that.attr("action"),
                         method = that.attr("method"),
