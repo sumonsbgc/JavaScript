@@ -1,0 +1,43 @@
+body{
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+a.button{
+    background-color: #000;
+    color: #fff;
+    padding: 10px 30px;
+    border: 0;
+    border-radius: 7px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color:rgba(0,0,0, 0.5);
+}
+
+.modal-content{
+    background-color: #f4f4f4;
+    margin: 7% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2),
+    0 7px 20px 0 rgba(0, 0, 0, 0.17);
+}
+
+.closeBtn{
+    color: #ccc;
+    float: right;
+    font-size: 30px;
+    cursor: pointer;
+}
