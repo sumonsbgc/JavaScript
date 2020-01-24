@@ -1,0 +1,41 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container{
+  width: 100%;
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 -15px;
+}
+
+.row{
+  margin: 0 -15px;
+}
+
+.col-sm-12{
+  padding: 0 15px;
+  width: 100%;
+}
+
+.tab-header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.tab-header li{
+
+}
+
+.tab-header li a{
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+  display: block;
+}

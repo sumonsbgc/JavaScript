@@ -1,7 +1,9 @@
 <?php
 
-if(isset($_FILES["user_profile"]))
-{
+print_r($_POST);
+print_r($_FILES);
+
+if (isset($_FILES["user_profile"])) {
 
     $fname          = $_POST['signup_fname'];
     $lname          = $_POST['signup_lname'];
@@ -11,12 +13,12 @@ if(isset($_FILES["user_profile"]))
 
     $csvFile = $_FILES["user_profile"]["name"];
     $csvTempName = $_FILES["user_profile"]["tmp_name"];
- 
-    echo($fname.", ". $lname.", ". $email.", ".$csvFile.", ". $csvTempName);
-    printf("Your name is %s %s and Your Email is %s. You uploaded ");
+
+    // echo ($fname . ", " . $lname . ", " . $email . ", " . $csvFile . ", " . $csvTempName);
+    // printf("Your name is %s %s and Your Email is %s. You uploaded %s", $fname, $lname, $email, $csvFile);
 
 
-    
+
 
     // echo $csvTempName;
     // echo $csvFile;
@@ -31,5 +33,5 @@ if(isset($_FILES["user_profile"]))
 
     // // echo "Hello " . $fname . " " . $lname . ", Is this your email => " . $email;
     // printf("Hello %s %s, Is this your email? => %s", $fname, $lname, $email);
-    
+
 }
